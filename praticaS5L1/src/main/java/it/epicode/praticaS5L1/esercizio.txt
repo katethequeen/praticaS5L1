@@ -1,0 +1,10 @@
+Implementare un progetto Spring che contenga il modello di un sistema di stampa del menù per una pizzeria.
+La pizzeria offre pizza e bevande i quali hanno un prezzo e delle informazioni nutrizionali che devono comparire
+a menù. Ogni pizza contiene di base pomodoro e mozzarella (margherita) e può essere arricchita da vari toppings che
+possono essere aggiunti più volte (es. margherita + doppio prosciutto).
+Le combinazioni di topping hanno un nome (es. Hawaiian Pizza per la margherita con prosciutto e ananas)
+e questi nomi devono comparire nel menù.
+1.1 Definire la gerarchia di classi per pizze, bevande, toppings e menù.
+1.2 Creare una classe di configurazione per Beans contenente vari Beans per pizze, toppings e drinks.
+1.3 Dal main richiamare il Bean di tipo Menu, definito anch'esso nella classe di configurazione, e stampare a video il suo contenuto.
+Opzionale: Fornire la possibilità di avere a menù anche pizze formato XL.
