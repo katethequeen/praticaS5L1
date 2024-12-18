@@ -2,21 +2,23 @@ package it.epicode.praticaS5L1.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Data
-@Table(name = "toppings")
-public class Topping {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+@NoArgsConstructor
+public class Topping extends Item{
     private String name;
-    private Double price;
-    private Integer calories;
+
+    //Relazione
+    @ManyToMany(mappedBy = "ingredients")
+    private List<Pizza> pizzas;
 
     public Topping(String name, Double price, Integer calories) {
+        super(price, calories);
         this.name = name;
-        this.price = price;
-        this.calories = calories;
     }
+
 }

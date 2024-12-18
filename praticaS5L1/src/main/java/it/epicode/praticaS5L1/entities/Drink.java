@@ -2,21 +2,21 @@ package it.epicode.praticaS5L1.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@Table(name = "drinks")
-public class Drink {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+@NoArgsConstructor
+public class Drink extends Item{
     private String name;
-    private Double price;
-    private Integer calories;
+
+    @ManyToOne
+    private Menu menu;
 
     public Drink(String name, Double price, Integer calories) {
+
+        super(price, calories);
         this.name = name;
-        this.price = price;
-        this.calories = calories;
     }
+
 }
